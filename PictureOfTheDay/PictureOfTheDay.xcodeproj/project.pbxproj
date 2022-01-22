@@ -99,13 +99,8 @@
 		84CC4287279BDBC3003C57C5 /* PictureOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				84CC4288279BDBC3003C57C5 /* AppDelegate.swift */,
-				84CC428A279BDBC3003C57C5 /* SceneDelegate.swift */,
-				84CC428C279BDBC3003C57C5 /* ViewController.swift */,
-				84CC428E279BDBC3003C57C5 /* Main.storyboard */,
-				84CC4291279BDBC6003C57C5 /* Assets.xcassets */,
-				84CC4293279BDBC6003C57C5 /* LaunchScreen.storyboard */,
-				84CC4296279BDBC6003C57C5 /* Info.plist */,
+				84CC42B9279BDDDA003C57C5 /* Source */,
+				84CC42B8279BDDBB003C57C5 /* Resource */,
 			);
 			path = PictureOfTheDay;
 			sourceTree = "<group>";
@@ -125,6 +120,75 @@
 				84CC42AB279BDBC6003C57C5 /* PictureOfTheDayUITestsLaunchTests.swift */,
 			);
 			path = PictureOfTheDayUITests;
+			sourceTree = "<group>";
+		};
+		84CC42B8279BDDBB003C57C5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				84CC4293279BDBC6003C57C5 /* LaunchScreen.storyboard */,
+				84CC428E279BDBC3003C57C5 /* Main.storyboard */,
+				84CC4296279BDBC6003C57C5 /* Info.plist */,
+				84CC4291279BDBC6003C57C5 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		84CC42B9279BDDDA003C57C5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84CC42BF279BDEFD003C57C5 /* Service */,
+				84CC42BB279BDE85003C57C5 /* MainScreen */,
+				84CC42BA279BDE6B003C57C5 /* AppDelegate */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84CC42BA279BDE6B003C57C5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84CC428A279BDBC3003C57C5 /* SceneDelegate.swift */,
+				84CC4288279BDBC3003C57C5 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84CC42BB279BDE85003C57C5 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84CC42BE279BDEE1003C57C5 /* Presenter */,
+				84CC42BD279BDED0003C57C5 /* Model */,
+				84CC42BC279BDEBB003C57C5 /* View */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		84CC42BC279BDEBB003C57C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84CC428C279BDBC3003C57C5 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84CC42BD279BDED0003C57C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84CC42BE279BDEE1003C57C5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84CC42BF279BDEFD003C57C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,7 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RG89A94N64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PictureOfTheDay/Info.plist;
+				INFOPLIST_FILE = PictureOfTheDay/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,7 +533,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RG89A94N64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PictureOfTheDay/Info.plist;
+				INFOPLIST_FILE = PictureOfTheDay/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
