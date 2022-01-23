@@ -29,26 +29,36 @@ class WebAPIService {
         self.session = URLSession(configuration: urlConfig)
     }
     
-    func fetchPictureOfTheDay(completion: ((Picture?, Error?) -> Void)?) {
+    func fetchPictureOfTheDay(completion: ((Result<Picture, Error>) -> Void)?) {
         var fetchConfig = self.config
         fetchConfig.path = RequestType.pictureOfTheDay.rawValue
         
         guard let request = fetchConfig.getRequest else {
-            completion?(nil, NSError(domain: "com.Invalid", code: 23, userInfo: nil))
+            completion?(.failure(APIError.invalidRequest))
             return
         }
         
         let dataTask = session.dataTask(with: request) { data, response, error in
-            guard let pictureData = data, error == nil else {
-                completion?(nil, error)
+            
+            if let serverError = error {
+                completion?(.failure(serverError))
+                return
+            }
+            
+            guard let pictureData = data else {
+                completion?(.failure(APIError.invalidResponse))
                 return
             }
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
-            let picture = try? decoder.decode(Picture.self, from: pictureData)
-            completion?(picture, nil)
+            guard let picture = try? decoder.decode(Picture.self, from: pictureData) else {
+                completion?(.failure(APIError.parsingFailed))
+                return
+            }
+            
+            completion?(.success(picture))
         }
         
         dataTask.resume()

@@ -8,7 +8,7 @@
 import Foundation
 
 class Picture: Codable {
-    var copyright: String
+    var copyright: String?
     var date: String
     var explanation: String
     var hdurl: String

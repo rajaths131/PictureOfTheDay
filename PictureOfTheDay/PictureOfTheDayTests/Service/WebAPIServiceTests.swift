@@ -19,10 +19,16 @@ class WebAPIServiceTests: XCTestCase {
     func test_fetchPictureOfTheDay_success() throws {
         apiService = WebAPIService()
         let fetchPromise = expectation(description: "fetch")
-        apiService?.fetchPictureOfTheDay(completion: { picture, error in
+        apiService?.fetchPictureOfTheDay(completion: { result in
             fetchPromise.fulfill()
             
-            XCTAssertNotNil(picture, "Parsing Should not fail")
+            switch result {
+            case .success(_):
+                XCTAssertTrue(true)
+
+            case .failure(_):
+                XCTAssertTrue(false)
+            }
         })
         
         waitForExpectations(timeout: 60, handler: nil)
@@ -32,10 +38,16 @@ class WebAPIServiceTests: XCTestCase {
         let config = APIConfig(endPoint: "https://testing", defaultParam: [:])
         apiService = WebAPIService(config: config)
         let fetchPromise = expectation(description: "fetch")
-        apiService?.fetchPictureOfTheDay(completion: { picture, error in
+        apiService?.fetchPictureOfTheDay(completion: { result in
             fetchPromise.fulfill()
             
-            XCTAssertNotNil(error, "It should fail with error")
+            switch result {
+            case .success(_):
+                XCTAssertTrue(false)
+
+            case .failure(_):
+                XCTAssertTrue(true)
+            }
         })
         
         waitForExpectations(timeout: 60, handler: nil)
@@ -45,10 +57,16 @@ class WebAPIServiceTests: XCTestCase {
         let config = APIConfig(endPoint: "te#$^^sting", defaultParam: [:])
         apiService = WebAPIService(config: config)
         let fetchPromise = expectation(description: "fetch")
-        apiService?.fetchPictureOfTheDay(completion: { picture, error in
+        apiService?.fetchPictureOfTheDay(completion: { result in
             fetchPromise.fulfill()
             
-            XCTAssertNotNil(error, "It should fail with error")
+            switch result {
+            case .success(_):
+                XCTAssertTrue(false)
+
+            case .failure(_):
+                XCTAssertTrue(true)
+            }
         })
         
         waitForExpectations(timeout: 60, handler: nil)
