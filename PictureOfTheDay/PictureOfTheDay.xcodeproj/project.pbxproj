@@ -13,7 +13,6 @@
 		84CC4290279BDBC3003C57C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC428E279BDBC3003C57C5 /* Main.storyboard */; };
 		84CC4292279BDBC6003C57C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CC4291279BDBC6003C57C5 /* Assets.xcassets */; };
 		84CC4295279BDBC6003C57C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC4293279BDBC6003C57C5 /* LaunchScreen.storyboard */; };
-		84CC42A0279BDBC6003C57C5 /* PictureOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC429F279BDBC6003C57C5 /* PictureOfTheDayTests.swift */; };
 		84CC42AA279BDBC6003C57C5 /* PictureOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42A9279BDBC6003C57C5 /* PictureOfTheDayUITests.swift */; };
 		84CC42AC279BDBC6003C57C5 /* PictureOfTheDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42AB279BDBC6003C57C5 /* PictureOfTheDayUITestsLaunchTests.swift */; };
 		84CC42C3279BEE53003C57C5 /* WebAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42C2279BEE53003C57C5 /* WebAPIService.swift */; };
@@ -23,6 +22,8 @@
 		84CC42CE279C1669003C57C5 /* PictureOfTheDay.json in Resources */ = {isa = PBXBuildFile; fileRef = 84CC42CD279C1669003C57C5 /* PictureOfTheDay.json */; };
 		84CC42D1279C16AB003C57C5 /* PictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42D0279C16AB003C57C5 /* PictureTests.swift */; };
 		84CC42D5279C493C003C57C5 /* WebAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42D4279C493C003C57C5 /* WebAPIServiceTests.swift */; };
+		84CC42D7279C8844003C57C5 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42D6279C8844003C57C5 /* DownloadService.swift */; };
+		84CC42D9279C92C9003C57C5 /* DownloadServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC42D8279C92C9003C57C5 /* DownloadServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		84CC4294279BDBC6003C57C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CC4296279BDBC6003C57C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CC429B279BDBC6003C57C5 /* PictureOfTheDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureOfTheDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84CC429F279BDBC6003C57C5 /* PictureOfTheDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayTests.swift; sourceTree = "<group>"; };
 		84CC42A5279BDBC6003C57C5 /* PictureOfTheDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureOfTheDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CC42A9279BDBC6003C57C5 /* PictureOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayUITests.swift; sourceTree = "<group>"; };
 		84CC42AB279BDBC6003C57C5 /* PictureOfTheDayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		84CC42CD279C1669003C57C5 /* PictureOfTheDay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PictureOfTheDay.json; sourceTree = "<group>"; };
 		84CC42D0279C16AB003C57C5 /* PictureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTests.swift; sourceTree = "<group>"; };
 		84CC42D4279C493C003C57C5 /* WebAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIServiceTests.swift; sourceTree = "<group>"; };
+		84CC42D6279C8844003C57C5 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		84CC42D8279C92C9003C57C5 /* DownloadServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,6 @@
 				84CC42CC279C1640003C57C5 /* Resource */,
 				84CC42C5279BF6BA003C57C5 /* MainScreen */,
 				84CC42C4279BF6A5003C57C5 /* Service */,
-				84CC429F279BDBC6003C57C5 /* PictureOfTheDayTests.swift */,
 			);
 			path = PictureOfTheDayTests;
 			sourceTree = "<group>";
@@ -208,6 +209,7 @@
 				84CC42C2279BEE53003C57C5 /* WebAPIService.swift */,
 				84CC42C8279C0820003C57C5 /* APIConfig.swift */,
 				84CC42CA279C0BEE003C57C5 /* Picture.swift */,
+				84CC42D6279C8844003C57C5 /* DownloadService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 			children = (
 				84CC42C6279BF6E6003C57C5 /* APIConfigTests.swift */,
 				84CC42D4279C493C003C57C5 /* WebAPIServiceTests.swift */,
+				84CC42D8279C92C9003C57C5 /* DownloadServiceTests.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CC42CB279C0BEE003C57C5 /* Picture.swift in Sources */,
+				84CC42D7279C8844003C57C5 /* DownloadService.swift in Sources */,
 				84CC428D279BDBC3003C57C5 /* ViewController.swift in Sources */,
 				84CC4289279BDBC3003C57C5 /* AppDelegate.swift in Sources */,
 				84CC428B279BDBC3003C57C5 /* SceneDelegate.swift in Sources */,
@@ -390,8 +394,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CC42C7279BF6E6003C57C5 /* APIConfigTests.swift in Sources */,
+				84CC42D9279C92C9003C57C5 /* DownloadServiceTests.swift in Sources */,
 				84CC42D1279C16AB003C57C5 /* PictureTests.swift in Sources */,
-				84CC42A0279BDBC6003C57C5 /* PictureOfTheDayTests.swift in Sources */,
 				84CC42D5279C493C003C57C5 /* WebAPIServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
