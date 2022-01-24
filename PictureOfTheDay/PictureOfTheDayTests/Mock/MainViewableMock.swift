@@ -19,6 +19,7 @@ class MainViewableMock: MainViewable {
     var hideLoadingIndicatorAndShowImageCalled = false
     var image: UIImage?
     var hideLoadingIndicatorAndShowNoImageErrorCalled = false
+    var triggerPoint: (() -> Void)?
     
     func showLoadingIndicator() {
         showLoadingIndicatorCalled = true
@@ -26,10 +27,12 @@ class MainViewableMock: MainViewable {
     
     func hideLoadingIndicatorAndShowNoDataError() {
         hideLoadingIndicatorAndShowNoDataErrorCalled = true
+        triggerPoint?()
     }
     
     func hideLoadingIndicator() {
         hideLoadingIndicatorCalled = true
+        triggerPoint?()
     }
     
     func showDetails(title: String, details: String, isPastImage: Bool) {
@@ -37,15 +40,18 @@ class MainViewableMock: MainViewable {
         self.title = title
         self.details = details
         self.isPastImage = isPastImage
+        triggerPoint?()
     }
     
     func hideLoadingIndicatorAndShowImage(_ image: UIImage) {
         hideLoadingIndicatorAndShowImageCalled = true
         self.image = image
+        triggerPoint?()
     }
     
     func hideLoadingIndicatorAndShowNoImageError() {
         hideLoadingIndicatorAndShowNoImageErrorCalled = true
+        triggerPoint?()
     }
 
 }

@@ -19,3 +19,4 @@ Some improvement we are looking for in next version are:
 2. If image download is failed, a error can be shown to user.
 3. Network reachability issue can be identified and seperate error can be shown to user.
 4. Zoom option for image can be provided to user.
+5. Add more unit test to cover all cases
