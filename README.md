@@ -1,7 +1,8 @@
 # PictureOfTheDay
- iOS App where the user can see the daily picture from NASA. This project is implemented using MVP pattern, to demonstrate each components of MVP. 
+ Sample iOS App where the user can see the daily picture from NASA. This project is implemented
+ using MVP pattern, to demonstrate each components of MVP. 
  
- This sample is developed using Swift. Unit tests and UI tests are added to code.
+ This sample is developed using Swift 5. Unit tests and UI tests are added.
  
  Main features covered are:
  1. A error banner will be shown, if app could not fetch details from server. 
@@ -9,7 +10,7 @@
  3. If cached details are older then today, a banner message will be shown.
 
 ## API:
-This app was built using [NASA API](https://api.nasa.gov).
+This app is built using [NASA API](https://api.nasa.gov).
 
 ## Improvement Areas
 Some improvement we are looking for in next version are:
