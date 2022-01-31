@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8431734127A7B56600657601 /* EncodedUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431734027A7B56600657601 /* EncodedUserDefault.swift */; };
 		84CC4289279BDBC3003C57C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC4288279BDBC3003C57C5 /* AppDelegate.swift */; };
 		84CC428B279BDBC3003C57C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC428A279BDBC3003C57C5 /* SceneDelegate.swift */; };
 		84CC428D279BDBC3003C57C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC428C279BDBC3003C57C5 /* MainViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8431734027A7B56600657601 /* EncodedUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedUserDefault.swift; sourceTree = "<group>"; };
 		84CC4285279BDBC3003C57C5 /* PictureOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CC4288279BDBC3003C57C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CC428A279BDBC3003C57C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8431733F27A7B54800657601 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				8431734027A7B56600657601 /* EncodedUserDefault.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
 		84CC427C279BDBC3003C57C5 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		84CC42B9279BDDDA003C57C5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8431733F27A7B54800657601 /* PropertyWrapper */,
 				84CC42BF279BDEFD003C57C5 /* Service */,
 				84CC42BB279BDE85003C57C5 /* MainScreen */,
 				84CC42BA279BDE6B003C57C5 /* AppDelegate */,
@@ -412,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CC42CB279C0BEE003C57C5 /* Picture.swift in Sources */,
+				8431734127A7B56600657601 /* EncodedUserDefault.swift in Sources */,
 				84CC42DB279CE73A003C57C5 /* DataFetchInteracter.swift in Sources */,
 				84CC42D7279C8844003C57C5 /* DownloadService.swift in Sources */,
 				84CC42EC279DD082003C57C5 /* APIError.swift in Sources */,

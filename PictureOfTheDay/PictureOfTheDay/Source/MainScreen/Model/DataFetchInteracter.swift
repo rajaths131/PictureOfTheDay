@@ -18,6 +18,9 @@ class DataFetchInteracter {
     var downloadService: DownloadService
     var userDefaults = UserDefaults.standard
     
+    @EncodedUserDefault<Picture>(key: Constants.dataKey)
+    var picture
+    
     init(apiService: WebAPIService = WebAPIService(),
          downloadService: DownloadService = DownloadService()) {
         self.apiService = apiService
@@ -38,12 +41,8 @@ class DataFetchInteracter {
     }
     
     private func checkForCachedPitcure(completion: ((Result<Picture, Error>) -> Void)?) {
-        var picture: Picture?
-        if let pictureData = userDefaults.data(forKey: Constants.dataKey) {
-            picture = try? JSONDecoder().decode(Picture.self, from: pictureData)
-        }
-        
-        guard let parsedPicture = picture else {
+
+        guard let parsedPicture = self.picture else {
             completion?(.failure(APIError.parsingFailed))
             return
         }
@@ -53,8 +52,7 @@ class DataFetchInteracter {
     
     private func storeLastestPicture(_ picture: Picture,
                              completion: ((Result<Picture, Error>) -> Void)?) {
-        let data = try? JSONEncoder().encode(picture)
-        userDefaults.set(data, forKey: Constants.dataKey)
+        self.picture = picture
         completion?(.success(picture))
     }
     
